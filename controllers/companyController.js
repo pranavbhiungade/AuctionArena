@@ -38,7 +38,7 @@ exports.sellCompany = async (req, res) => {
       res.status(500).json({ message: "Error selling company", error });
     }
   };
-  
+
 exports.createCompany = async (req, res) => {
     try {
       const { name, logo, basePrice,domain, rating, marketCapital } = req.body;
@@ -78,3 +78,14 @@ exports.deleteCompany = async (req, res) => {
       res.status(500).json({ message: "Error deleting company", error });
     }
   };
+
+exports.getAllCompaniesData = async (req, res) => {
+    try {
+      // Find all companies and populate the domain and soldTo fields
+      const companies = await Company.find().populate('domain').populate('soldTo');
+  
+      res.status(200).json({ companies });
+    } catch (error) {
+      res.status(500).json({ message: "Error retrieving companies data", error });
+    }
+};
