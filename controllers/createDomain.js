@@ -17,3 +17,15 @@ exports.createDomain = async (req, res) => {
       res.status(500).json({ message: "Error creating domain", error });
     }
   };
+
+
+  exports.getAllDomains = async (req, res) => {
+    try {
+        const domains = await Domain.find();
+        res.json(domains);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server Error' });
+    }
+};
+
