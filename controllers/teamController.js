@@ -4,25 +4,23 @@ const Team = require("../models/team");
 const Domain = require("../models/domain");
 
 // working
-exports.createTeam = async (req, res) => {
-  try {
-    const { name, password, budget } = req.body;
+// exports.createTeam = async (req, res) => {
+//     try {
+//       const { name, password, budget } = req.body;
 
-    const newTeam = new Team({
-      name,
-      password,
-      budget,
-      purchasedCompanies: [],
-    });
+//       const newTeam = new Team({
+//         name,
+//         password,
+//         budget,
+//         purchasedCompanies: []
+//       });
 
-    await newTeam.save();
-    res
-      .status(201)
-      .json({ message: "Team created successfully", team: newTeam });
-  } catch (error) {
-    res.status(500).json({ message: "Error creating team", error });
-  }
-};
+//       await newTeam.save();
+//       res.status(201).json({ message: "Team created successfully", team: newTeam });
+//     } catch (error) {
+//       res.status(500).json({ message: "Error creating team", error });
+//     }
+//   };
 
 // working
 exports.getTeamData = async (req, res) => {

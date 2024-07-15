@@ -3,8 +3,10 @@ const mongoose = require("mongoose");
 const teamSchema = new mongoose.Schema({
     name: String,
     password:String,
-    budget: Number,
-    purchasedCompanies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Company' }],
+    confirmPassword:String,
+    role:{type:String ,default:"team"},
+    budget: {type:Number,default:100000},
+    purchasedCompanies: { type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Company' }], default: [] },
 });
 
 module.exports = mongoose.model("Team",teamSchema);
