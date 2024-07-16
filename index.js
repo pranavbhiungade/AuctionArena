@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 require("dotenv").config();
 
 const database = require("./config/database");
@@ -8,6 +9,7 @@ database.connect();
 
 const PORT = 3000;
 app.use(express.json());
+app.use(cors());
 
 const companyRoutes = require("./routes/companyRoutes");
 const teamRoutes = require("./routes/teamRoutes");
@@ -24,3 +26,4 @@ app.get("/",(req,res)=>{
 })
 
 // npm run dev
+
