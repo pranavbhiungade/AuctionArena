@@ -9,6 +9,6 @@ router.post("/team/register",register);
 router.post("/team/login",login);
 // router.post('/team/register', createTeam);
 router.get('/team/getTeamData/:id', authenticate, teamAuthorization, getTeamData);
-router.get('/team/getAllTeamsData', authenticate, teamAuthorization, getAllTeams);
+router.get('/team/getAllTeamsData', authenticate,getAllTeams);
 
 module.exports = router;

@@ -5,7 +5,7 @@ const {sellCompany,createCompany,deleteCompany,getAllCompaniesData} = require(".
 const { createDomain } = require("../controllers/createDomain");
 const {authenticate,teamAuthorization,adminAuthorization} = require("../middleware/auth");
 
-router.put('/company/sellCompany/:id', authenticate, adminAuthorization, sellCompany);
+router.put('/company/sellCompany', authenticate, adminAuthorization, sellCompany);
 router.post('/company/createCompany', authenticate, adminAuthorization, createCompany);
 router.post('/company/createDomain', authenticate, adminAuthorization, createDomain);
 router.delete('/company/deleteCompany/:id', authenticate, adminAuthorization, deleteCompany);
