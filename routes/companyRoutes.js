@@ -9,7 +9,7 @@ router.put('/company/sellCompany', authenticate, adminAuthorization, sellCompany
 router.post('/company/createCompany', authenticate, adminAuthorization, createCompany);
 router.post('/company/createDomain', authenticate, adminAuthorization, createDomain);
 router.delete('/company/deleteCompany/:id', authenticate, adminAuthorization, deleteCompany);
-router.get('/company/getAllCompanies', authenticate, adminAuthorization, getAllCompaniesData);
+router.get('/company/getAllCompanies', authenticate, getAllCompaniesData);
 
 module.exports = router;
 
