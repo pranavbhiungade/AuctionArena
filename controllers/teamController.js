@@ -28,7 +28,13 @@ exports.getTeamData = async (req, res) => {
     const { id } = req.params;
 
     // Find the team and populate the purchased companies
-    const team = await Team.findById(id);
+    const team = await Team.findById(id).populate({
+      path: "purchasedCompanies",
+      populate: {
+        path: "domain",
+        model: "Domain",
+      },
+    });
 
     if (!team) {
       return res.status(404).json({ message: "Team not found" });
