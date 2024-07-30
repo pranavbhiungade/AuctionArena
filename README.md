@@ -5,7 +5,12 @@
 A comprehensive auction platform using the MERN stack for the Business Plan event, enabling auctioneers 
 and teams to track budgets and expenses in real time.
 
+<h1 align="center">
+  Block Diagram
+</h1>
+
 ![alt text](https://i.postimg.cc/VNXFPYb2/Screenshot-2024-07-30-230226.png)
+
 
 **Admin:**
 
