@@ -1,5 +1,5 @@
 <h1 align="center">
-  This text is centered.
+  AuctionArena
 </h1>
 
 A comprehensive auction platform using the MERN stack for the Business Plan event, enabling auctioneers 
