@@ -9,7 +9,7 @@ and teams to track budgets and expenses in real time.
   Block Diagram
 </h3>
 
-![alt text](https://i.postimg.cc/VNXFPYb2/Screenshot-2024-07-30-230226.png)
+![alt text](https://i.postimg.cc/W3dMJLn8/Screenshot-2024-07-31-002453.png)
 
 
 **Admin:**
