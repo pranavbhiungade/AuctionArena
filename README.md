@@ -9,7 +9,8 @@ and teams to track budgets and expenses in real time.
   Block Diagram
 </h3>
 
-![alt text](https://i.postimg.cc/VNXFPYb2/Screenshot-2024-07-30-230226.png)
+![Screenshot 2024-07-31 002453](https://github.com/user-attachments/assets/38ce341f-fa97-4576-83c5-ae6168bdbb9c)
+
 
 **Admin:**
 
@@ -39,3 +40,17 @@ and teams to track budgets and expenses in real time.
 
 - Represents multiple instances of admin users (m) and team users (n).
 - Interact with their respective interfaces (Admin or Team) which communicate with the backend.
+
+<h3>
+  Snapshots
+</h3>
+
+![welcome](https://github.com/user-attachments/assets/4c5d7b67-81ed-4615-916b-c736a5cc2bac)
+
+![adminPortal](https://github.com/user-attachments/assets/4019aa3b-e264-4c4d-9c72-b566bbc89c1e)
+
+![sellCompany](https://github.com/user-attachments/assets/24af324e-1774-495d-9f7a-735dc69250f0)
+
+![companies](https://github.com/user-attachments/assets/66582a29-3568-463e-a952-fba1b84a484d)
+
+![userDashboard](https://github.com/user-attachments/assets/81959fb6-4019-4b9c-8025-ca6d7b417510)
