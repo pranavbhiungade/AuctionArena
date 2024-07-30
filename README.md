@@ -9,7 +9,7 @@ and teams to track budgets and expenses in real time.
   Block Diagram
 </h3>
 
-![alt text](https://mma.prnewswire.com/media/75107/barclaycard_us_logo.jpg?p=twitter)
+[![Screenshot-2024-07-31-002453.png](https://i.postimg.cc/W3dMJLn8/Screenshot-2024-07-31-002453.png)](https://postimg.cc/47TKr0jH)
 
 
 **Admin:**
