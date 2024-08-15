@@ -9,11 +9,11 @@ database.connect();
 
 const PORT = 3000;
 app.use(express.json());
-app.use(cors(cors({
+app.use(cors({
     credentials: true,
     origin: "https://auctionarena.netlify.app",
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these methods
-})));
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these methods
+}));
 
 const companyRoutes = require("./routes/companyRoutes");
 const teamRoutes = require("./routes/teamRoutes");
