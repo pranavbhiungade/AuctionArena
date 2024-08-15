@@ -17,9 +17,11 @@ app.use(cors(cors({
 
 const companyRoutes = require("./routes/companyRoutes");
 const teamRoutes = require("./routes/teamRoutes");
+const domainRoutes=require("./routes/domainRoutes");
 
 app.use("/",companyRoutes);
 app.use("/teams",teamRoutes);
+app.use("/",domainRoutes);
 
 app.listen(PORT,()=>{
     console.log("App is running successfully");
