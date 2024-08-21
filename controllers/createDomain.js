@@ -6,6 +6,11 @@ const Domain = require("../models/domain");
 exports.createDomain = async (req, res) => {
     try {
       const { name } = req.body;
+      const regex = /^[^\d]+$/;
+
+    if (!regex.test(name)) {
+      return res.status(400).json({ message: 'Invalid domain name. Numbers are not allowed.' });
+    }
   
       const newDomain = new Domain({
         name

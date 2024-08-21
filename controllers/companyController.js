@@ -48,6 +48,29 @@ exports.sellCompany = async (req, res) => {
 exports.createCompany = async (req, res) => {
     try {
       const { name, logo, basePrice,domain, rating, marketCapital } = req.body;
+      if(!name || !logo || !basePrice || !domain || !rating || !marketCapital){
+        return res.status(400).json({ message: "Please enter all the details" });
+      }
+
+      if(basePrice < 0){
+        return res.status(400).json({ message: "Please enter valid base price" });
+      }
+
+      if(marketCapital < 0){
+        return res.status(400).json({ message: "Please enter valid market capital" });
+      }
+
+      if(rating >5 || rating < 1){
+        return res.status(400).json({ message: "Please enter valid rating" });
+      }
+
+      if(basePrice > 500000){
+        return res.status(400).json({ message: "Base price exceeds the maximum limit of 500000" });
+      }
+
+      if(marketCapital > 50000000){
+        return res.status(400).json({ message: "Market capital exceeds the maximum limit of 500000" });
+      }
   
       const newCompany = new Company({
         name,
