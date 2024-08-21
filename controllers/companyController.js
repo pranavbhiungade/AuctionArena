@@ -11,7 +11,7 @@ exports.sellCompany = async (req, res) => {
       // Find the company and team
       const company = await Company.findById(companyId);
       const team = await Team.findById(teamId);
-  
+      
       if (!company || !team) {
         return res.status(404).json({ message: "Company or Team not found" });
       }
@@ -19,7 +19,10 @@ exports.sellCompany = async (req, res) => {
       if (company.sold) {
         return res.status(400).json({ message: "Company is already sold" });
       }
-  
+      
+      if(team.budget < soldAt){
+        return res.status(400).json({ message: "The Bid exceeds available amount" });
+      }
       // Update company as sold
 
       company.sold = true;
