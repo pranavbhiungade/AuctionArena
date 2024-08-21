@@ -6,6 +6,9 @@ const Domain = require("../models/domain");
 
 exports.sellCompany = async (req, res) => {
     try {
+      if(!req.body.companyId || !req.body.teamId || !req.body.soldAt){
+        return res.status(404).json({ message: "Enter all the Fields" });
+      }
       const { companyId, teamId ,soldAt } = req.body;
   
       // Find the company and team
