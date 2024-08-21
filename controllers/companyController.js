@@ -6,8 +6,8 @@ const Domain = require("../models/domain");
 
 exports.sellCompany = async (req, res) => {
     try {
-      if(!req.body.companyId || !req.body.teamId || !req.body.soldAt){
-        return res.status(404).json({ message: "Enter all the Fields" });
+      if(!req.body.companyId || !req.body.teamId || !req.body.soldAt || req.body.soldAt===0){
+        return res.status(404).json({ message: "Enter all the valid Fields" });
       }
       const { companyId, teamId ,soldAt } = req.body;
   
