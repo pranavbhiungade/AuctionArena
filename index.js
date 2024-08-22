@@ -11,7 +11,7 @@ const PORT = 3000;
 app.use(express.json());
 app.use(cors({
     credentials: true,
-    origin: "https://auctionarena.netlify.app",
+    origin: "http://localhost:3001",
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these methods
 }));
 
